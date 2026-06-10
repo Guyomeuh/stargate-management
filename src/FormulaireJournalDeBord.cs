@@ -411,7 +411,6 @@ namespace LittlePlanete
                 string date = dtpDateEvent.Value.ToString("yyyy-MM-dd");
                 string commentaire = rtxtCommentaire.Text.Replace("'", "''");
                 string request = $"INSERT INTO JournalDeBord(nomPlanete, numero, dateJ, commentaires) VALUES ('{missionActuelle["nomPlanete"].ToString()}','{missionActuelle["numero"].ToString()}','{date}','{commentaire}')";
-                MessageBox.Show(request);
                 SQLiteCommand cmd = new SQLiteCommand(request,co);
                 int res = cmd.ExecuteNonQuery();
 
